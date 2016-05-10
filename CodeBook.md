@@ -1,14 +1,91 @@
-The code book file describes the variables, data cleaning, formatting of variables etc..
-The data source where the data was retrieved is from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-And the data for this assignment was posted on https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-In R code we are performing the following steps in order to get the tidy and readable data. 
-1.	Reads the X_train, Y_train and Subject_train from the train folder and saves it to trainData, trainLabeland trainSubject respectively.
-2.	Reads the X_test, Y_test and Subject_test from the test folder and saves it to testData, testLabeland testSubject respectively.
-3.	Merging testData and trainData to get the merged dataset i.e. joinData then
-merging testLabel and trainLabel to get the merged dataset i.e. joinLabel then
-4.	merging testSubject and trainSubject to get the dataset i.e. joinSubject.
-5.	Then reading the features.txt file from the destination folder and storing the variable Features. The information on the measurements on the means and Stdev we extracted.
-6.	From the jointdata of means and stdev “()” and “-“ are removed. Then the 1st letters of mean and stdev were capitalized. 
-7.	Activity_labels.txt file and stored in the data activity. Then the activity names were transformed into lowercase, removed the underscores, and capitalize the 1st letter which appeared right after the underscore.
-8.	Merged joinsubject, joinlabel and joindata by column subject to obtain the merged dataset i.e “cleaned data”. The cleaned data was written out as “merged_data.txt” on the destination folder as a flat file.
-9.	A second independent dataset with average of each measurement for each activity and subject was created i.e. “Result data”. The file was written out as "data_with_means.txt on the destination folder as a flat file.
+Code Book
+Below is an information on all the variables that are in the data, and the information on the transformations that were performed to clean up the data. Activity Variables… 
+
+subjectiD : 1-30
+activityName :
+    1           WALKING
+    2           WALKING_UPSTAIRS
+    3           WALKING_DOWNSTAIRS
+    4           SITTING
+    5           STANDING
+    6           LAYING
+Variables
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. 
+(tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ) are the body linear acceleration and angular velocity that were derived in time to obtain Jerk signals 
+(tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+Magnitude of these three-dimensional signals were calculated using the Euclidean norm.
+Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. 
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+mean(): Mean value
+std(): Standard deviation
+
+• tBodyAcc-mean()-X
+• tBodyAcc-mean()-Y
+• tBodyAcc-mean()-Z
+• tBodyAcc-std()-X
+• tBodyAcc-std()-Y
+• tBodyAcc-std()-Z
+• tGravityAcc-mean()-X
+• tGravityAcc-mean()-Y
+• tGravityAcc-mean()-Z
+• tGravityAcc-std()-X
+• tGravityAcc-std()-Y
+• tGravityAcc-std()-Z
+• tBodyAccJerk-mean()-X
+• tBodyAccJerk-mean()-Y
+• tBodyAccJerk-mean()-Z
+• tBodyAccJerk-std()-X
+• tBodyAccJerk-std()-Y
+• tBodyAccJerk-std()-Z
+• tBodyGyro-mean()-X
+• tBodyGyro-mean()-Y
+• tBodyGyro-mean()-Z
+• tBodyGyro-std()-X
+• tBodyGyro-std()-Y
+• tBodyGyro-std()-Z
+• tBodyGyroJerk-mean()-X
+• tBodyGyroJerk-mean()-Y
+• tBodyGyroJerk-mean()-Z
+• tBodyGyroJerk-std()-X
+• tBodyGyroJerk-std()-Y
+• tBodyGyroJerk-std()-Z
+• tBodyAccMag-mean()
+• tBodyAccMag-std()
+• tGravityAccMag-mean()
+• tGravityAccMag-std()
+• tBodyAccJerkMag-mean()
+• tBodyAccJerkMag-std()
+• tBodyGyroMag-mean()
+• tBodyGyroMag-std()
+• tBodyGyroJerkMag-mean()
+• tBodyGyroJerkMag-std()
+• fBodyAcc-mean()-X
+• fBodyAcc-mean()-Y
+• fBodyAcc-mean()-Z
+• fBodyAcc-std()-X
+• fBodyAcc-std()-Y
+• fBodyAcc-std()-Z
+• fBodyAccJerk-mean()-X
+• fBodyAccJerk-mean()-Y
+• fBodyAccJerk-mean()-Z
+• fBodyAccJerk-std()-X
+• fBodyAccJerk-std()-Y
+• fBodyAccJerk-std()-Z
+• fBodyGyro-mean()-X
+• fBodyGyro-mean()-Y
+• fBodyGyro-mean()-Z
+• fBodyGyro-std()-X
+• fBodyGyro-std()-Y
+• fBodyGyro-std()-Z
+• fBodyAccMag-mean()
+• fBodyAccMag-std()
+• fBodyBodyAccJerkMag-mean()
+• fBodyBodyAccJerkMag-std()
+• fBodyBodyGyroMag-mean()
+• fBodyBodyGyroMag-std()
+• fBodyBodyGyroJerkMag-mean()
+• fBodyBodyGyroJerkMag-std()
+
+The detailed list of variables for each feature vector are available in 'features.txt' flat file.
+
