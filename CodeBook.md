@@ -86,6 +86,5 @@ std(): Standard deviation
 • fBodyBodyGyroMag-std()
 • fBodyBodyGyroJerkMag-mean()
 • fBodyBodyGyroJerkMag-std()
-
 The detailed list of variables for each feature vector are available in 'features.txt' flat file.
 
