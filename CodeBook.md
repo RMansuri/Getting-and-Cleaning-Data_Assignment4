@@ -9,6 +9,7 @@ activityName :
     4           SITTING
     5           STANDING
     6           LAYING
+
 Variables
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. 
 (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ) are the body linear acceleration and angular velocity that were derived in time to obtain Jerk signals 
